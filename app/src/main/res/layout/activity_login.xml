@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="登陆"
+        android:textSize="40sp"
+        android:id="@+id/textView"
+        android:layout_marginTop="83dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="用户名："
+        android:id="@+id/pvUser"
+        android:layout_marginTop="41dp"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="密    码："
+        android:id="@+id/tvPassword"
+        android:layout_below="@+id/pvUser"
+        android:layout_alignRight="@+id/pvUser"
+        android:layout_alignEnd="@+id/pvUser"
+        android:layout_marginTop="44dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/etUser"
+        android:layout_above="@+id/tvPassword"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/etPassword"
+        android:layout_alignBottom="@+id/tvPassword"
+        android:layout_alignLeft="@+id/etUser"
+        android:layout_alignStart="@+id/etUser" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="注册"
+        android:id="@+id/btnSignUp"
+        android:onClick="onSignUp"
+        android:layout_below="@+id/tvPassword"
+        android:layout_alignRight="@+id/tvPassword"
+        android:layout_alignEnd="@+id/tvPassword"
+        android:layout_marginTop="98dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登陆"
+        android:id="@+id/btnLogin"
+        android:onClick="onLogin"
+        android:layout_alignBottom="@+id/btnSignUp"
+        android:layout_alignLeft="@+id/etPassword"
+        android:layout_alignStart="@+id/etPassword" />
+</RelativeLayout>
