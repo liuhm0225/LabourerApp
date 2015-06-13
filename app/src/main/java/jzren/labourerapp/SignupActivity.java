@@ -5,26 +5,20 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 
-public class LoginActivity extends ActionBarActivity {
+public class SignupActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-
+        setContentView(R.layout.activity_signup);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_signup, menu);
         return true;
     }
 
@@ -43,25 +37,11 @@ public class LoginActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onLogin(View view) {
-        //EditText user = (EditText) this.findViewById(R.id.etUser);
-        //Toast.makeText(getApplicationContext(), "用户：" + user.getText() + "登陆成功", Toast.LENGTH_SHORT).show();
-
+    @Override
+    public void onBackPressed() {
         Intent it = new Intent();
-        it.setClass(LoginActivity.this, MenuActivity.class);
+        it.setClass(SignupActivity.this, LoginActivity.class);
         startActivity(it);
-        LoginActivity.this.finish();
+        SignupActivity.this.finish();
     }
-
-    public void onSignUp(View view) {
-        Intent it = new Intent();
-        it.setClass(LoginActivity.this, SignupActivity.class);
-        startActivity(it);
-        LoginActivity.this.finish();
-    }
-
-    public void onForgetPsw(View view) {
-        Toast.makeText(getApplicationContext(), "密码找回中", Toast.LENGTH_SHORT).show();
-    }
-
 }
