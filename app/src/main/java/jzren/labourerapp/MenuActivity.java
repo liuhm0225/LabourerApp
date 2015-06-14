@@ -1,5 +1,6 @@
 package jzren.labourerapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,5 +35,13 @@ public class MenuActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent it = new Intent();
+        it.setClass(MenuActivity.this, LoginActivity.class);
+        startActivity(it);
+        MenuActivity.this.finish();
     }
 }
